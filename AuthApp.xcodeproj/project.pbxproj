@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		A2581924265CA3BB00DAEE18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2581923265CA3BB00DAEE18 /* AppDelegate.swift */; };
 		A2581926265CA3BB00DAEE18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2581925265CA3BB00DAEE18 /* SceneDelegate.swift */; };
-		A2581928265CA3BB00DAEE18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2581927265CA3BB00DAEE18 /* ViewController.swift */; };
 		A258192B265CA3BB00DAEE18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2581929265CA3BB00DAEE18 /* Main.storyboard */; };
 		A258192D265CA3C100DAEE18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A258192C265CA3C100DAEE18 /* Assets.xcassets */; };
 		A2581930265CA3C100DAEE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A258192E265CA3C100DAEE18 /* LaunchScreen.storyboard */; };
+		A2581938265CA44900DAEE18 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2581937265CA44900DAEE18 /* LoginViewController.swift */; };
+		A258193A265CA45300DAEE18 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2581939265CA45300DAEE18 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A2581920265CA3BB00DAEE18 /* AuthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2581923265CA3BB00DAEE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2581925265CA3BB00DAEE18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A2581927265CA3BB00DAEE18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A258192A265CA3BB00DAEE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A258192C265CA3C100DAEE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A258192F265CA3C100DAEE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2581931265CA3C100DAEE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2581937265CA44900DAEE18 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A2581939265CA45300DAEE18 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				A2581923265CA3BB00DAEE18 /* AppDelegate.swift */,
 				A2581925265CA3BB00DAEE18 /* SceneDelegate.swift */,
-				A2581927265CA3BB00DAEE18 /* ViewController.swift */,
 				A2581929265CA3BB00DAEE18 /* Main.storyboard */,
+				A2581939265CA45300DAEE18 /* WelcomeViewController.swift */,
+				A2581937265CA44900DAEE18 /* LoginViewController.swift */,
 				A258192C265CA3C100DAEE18 /* Assets.xcassets */,
 				A258192E265CA3C100DAEE18 /* LaunchScreen.storyboard */,
 				A2581931265CA3C100DAEE18 /* Info.plist */,
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2581928265CA3BB00DAEE18 /* ViewController.swift in Sources */,
+				A2581938265CA44900DAEE18 /* LoginViewController.swift in Sources */,
+				A258193A265CA45300DAEE18 /* WelcomeViewController.swift in Sources */,
 				A2581924265CA3BB00DAEE18 /* AppDelegate.swift in Sources */,
 				A2581926265CA3BB00DAEE18 /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
