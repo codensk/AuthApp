@@ -19,9 +19,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordInput: UITextField!
     
     @IBOutlet weak var loginButton: UIButton!
-    
-    @IBOutlet weak var formStackView: UIStackView!
-    
+        
     // MARK: - Properties
     private var user = User(username: "User", password: "Password")
     
@@ -76,10 +74,6 @@ class LoginViewController: UIViewController {
         passwordInput.returnKeyType = .done
         passwordInput.enablesReturnKeyAutomatically = true
         passwordInput.delegate = self
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
     }
     
     private func configureButtons() {
@@ -101,33 +95,7 @@ class LoginViewController: UIViewController {
         
         present(alert, animated: true)
     }
-    
-    @objc func keyboardWillShow(notification: NSNotification) {
-        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-            return
-        }
-        
-        var shouldMoveViewUp = false
-        
-        // If bottom of login form stack view is below the top of keyboard, move view up
-        if let formStackView = formStackView {
-            let bottomOfStackView = formStackView.convert(formStackView.bounds, to: view).maxY;
-            
-            let topOfKeyboard = view.frame.height - keyboardSize.height
-            
-            if bottomOfStackView > topOfKeyboard {
-                shouldMoveViewUp = true
-            }
-        }
-        
-        if(shouldMoveViewUp) {
-            view.frame.origin.y = 0 - keyboardSize.height
-        }
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        view.frame.origin.y = 0
-    }
+
 }
 
 // MARK: - Extensions
