@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     
+    @IBOutlet weak var loginButton: UIButton!
+    
     @IBOutlet weak var formStackView: UIStackView!
     
     // MARK: - Properties
@@ -28,6 +30,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         configureKeyboard()
+        configureButtons()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -79,11 +82,22 @@ class LoginViewController: UIViewController {
         
     }
     
+    private func configureButtons() {
+        loginButton.backgroundColor = UIColor(named: "loginButtonNormal")
+        loginButton.layer.cornerRadius = loginButton.frame.height / 2
+        
+        loginButton.setTitleColor(.white, for: .normal)
+        loginButton.setTitleColor(UIColor(named: "buttonTextHighlighted"), for: .highlighted)
+    }
+    
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okButton = UIAlertAction(title: "OK", style: .cancel)
         
         alert.addAction(okButton)
+        
+        // hide keyboard if visible
+        view.endEditing(true)
         
         present(alert, animated: true)
     }
