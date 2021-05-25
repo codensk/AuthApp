@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -14,24 +14,24 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="AuthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8Fg-Te-RtQ">
-                                <rect key="frame" x="73" y="355.5" width="268" height="185"/>
+                                <rect key="frame" x="68.333333333333343" y="370.66666666666669" width="291.33333333333326" height="185.00000000000006"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bt2-C3-t36">
-                                        <rect key="frame" x="0.0" y="0.0" width="268" height="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="291.33333333333331" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bXj-8T-bxS">
-                                        <rect key="frame" x="0.0" y="50" width="268" height="35"/>
+                                        <rect key="frame" x="0.0" y="50" width="291.33333333333331" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRd-7P-HUQ">
-                                        <rect key="frame" x="0.0" y="100" width="268" height="35"/>
+                                        <rect key="frame" x="0.0" y="100" width="291.33333333333331" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
@@ -39,10 +39,10 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lDt-VI-ulm">
-                                        <rect key="frame" x="0.0" y="150" width="268" height="35"/>
+                                        <rect key="frame" x="0.0" y="149.99999999999994" width="291.33333333333331" height="35"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHB-jB-HHK">
-                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="143.33333333333334" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <state key="normal" title="Forgot User Name?"/>
                                                 <connections>
@@ -50,7 +50,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoZ-hv-78W">
-                                                <rect key="frame" x="136.5" y="0.0" width="131.5" height="35"/>
+                                                <rect key="frame" x="148.33333333333331" y="0.0" width="143" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <state key="normal" title="Forgot Password?"/>
                                                 <connections>
@@ -69,11 +69,12 @@
                             <constraint firstItem="8Fg-Te-RtQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7JH-tz-ayy"/>
                             <constraint firstItem="8Fg-Te-RtQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TfM-2O-k6E"/>
                             <constraint firstItem="8Fg-Te-RtQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="hwf-uT-VYZ"/>
-                            <constraint firstItem="8Fg-Te-RtQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.64831" id="xq4-4T-Jng"/>
+                            <constraint firstItem="8Fg-Te-RtQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.68" id="xq4-4T-Jng"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fq9-FD-smN"/>
                     <connections>
+                        <outlet property="formStackView" destination="8Fg-Te-RtQ" id="7B7-TB-jUL"/>
                         <outlet property="passwordInput" destination="bXj-8T-bxS" id="W9Y-Ce-dXw"/>
                         <outlet property="usernameInput" destination="Bt2-C3-t36" id="vtM-7y-GGl"/>
                     </connections>
@@ -87,25 +88,25 @@
             <objects>
                 <viewController id="iih-Uj-lgA" customClass="WelcomeViewController" customModule="AuthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fdg-73-MqV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="fGb-co-8RE">
-                                <rect key="frame" x="43" y="174" width="328" height="215"/>
+                                <rect key="frame" x="43" y="174" width="342" height="215"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zno-VH-QxJ">
-                                        <rect key="frame" x="69.5" y="0.0" width="189" height="110"/>
+                                        <rect key="frame" x="76.666666666666671" y="0.0" width="188.66666666666663" height="110"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vmT-ca-Dgr">
-                                        <rect key="frame" x="109" y="105" width="110" height="110"/>
+                                        <rect key="frame" x="116" y="105" width="110" height="110"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdh-dt-clO">
-                                <rect key="frame" x="152" y="747" width="110" height="35"/>
+                                <rect key="frame" x="157" y="777" width="114" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>

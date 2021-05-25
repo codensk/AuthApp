@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     
+    @IBOutlet weak var formStackView: UIStackView!
+    
     // MARK: - Properties
     private var user = User(username: "User", password: "Password")
     
@@ -25,12 +27,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        usernameInput.returnKeyType = .next
-        usernameInput.delegate = self
-        
-        passwordInput.returnKeyType = .done
-        passwordInput.enablesReturnKeyAutomatically = true
-        passwordInput.delegate = self
+        configureKeyboard()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -69,6 +66,19 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: - Methods
+    private func configureKeyboard() {
+        usernameInput.returnKeyType = .next
+        usernameInput.delegate = self
+        
+        passwordInput.returnKeyType = .done
+        passwordInput.enablesReturnKeyAutomatically = true
+        passwordInput.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+    }
+    
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okButton = UIAlertAction(title: "OK", style: .cancel)
@@ -76,6 +86,33 @@ class LoginViewController: UIViewController {
         alert.addAction(okButton)
         
         present(alert, animated: true)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+        
+        var shouldMoveViewUp = false
+        
+        // If bottom of login form stack view is below the top of keyboard, move view up
+        if let formStackView = formStackView {
+            let bottomOfStackView = formStackView.convert(formStackView.bounds, to: view).maxY;
+            
+            let topOfKeyboard = view.frame.height - keyboardSize.height
+            
+            if bottomOfStackView > topOfKeyboard {
+                shouldMoveViewUp = true
+            }
+        }
+        
+        if(shouldMoveViewUp) {
+            view.frame.origin.y = 0 - keyboardSize.height
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        view.frame.origin.y = 0
     }
 }
 
