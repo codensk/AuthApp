@@ -95,7 +95,6 @@ class LoginViewController: UIViewController {
         
         present(alert, animated: true)
     }
-
 }
 
 // MARK: - Extensions
