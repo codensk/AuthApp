@@ -21,14 +21,8 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configure()
         showUserInfo()
-        configureButtons()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        setGradientBackground(colorTop: UIColor(named: "gradientStart")!, colorBottom: UIColor(named: "gradientFinish")!)
     }
     
     // MARK: - Methods
@@ -38,7 +32,9 @@ class WelcomeViewController: UIViewController {
         welcomeTitleLabel.text = "Welcome, \(user.username)!"
     }
     
-    private func configureButtons() {
+    private func configure() {
+        view.setGradientBackground(colorTop: UIColor(named: "gradientStart")!, colorBottom: UIColor(named: "gradientFinish")!)
+        
         logoutButton.backgroundColor = UIColor(named: "loginButtonNormal")
         logoutButton.layer.cornerRadius = logoutButton.frame.height / 2
         
@@ -46,14 +42,4 @@ class WelcomeViewController: UIViewController {
         logoutButton.setTitleColor(UIColor(named: "buttonTextHighlighted"), for: .highlighted)
     }
     
-    private func setGradientBackground(colorTop: UIColor, colorBottom: UIColor) {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [colorBottom.cgColor, colorTop.cgColor]
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
-        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
-        gradientLayer.locations = [0, 1]
-        gradientLayer.frame = view.bounds
-        
-        view.layer.insertSublayer(gradientLayer, at: 0)
-    }
 }

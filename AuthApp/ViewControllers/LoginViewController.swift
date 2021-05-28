@@ -7,11 +7,6 @@
 
 import UIKit
 
-struct User {
-    let username: String
-    let password: String
-}
-
 class LoginViewController: UIViewController {
     
     // MARK: - IBOutlets
@@ -21,7 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
         
     // MARK: - Properties
-    private var user = User(username: "User", password: "Password")
+    private let user = User(username: "User", password: "Password")
     
     // MARK: - Life Cycle Methods
     override func viewDidLoad() {
@@ -32,24 +27,22 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
         
         if usernameInput.text != user.username || passwordInput.text != user.password {
-            showAlert(title: "Error", message: "User not found :(")
+            showAlert(title: "Error", message: "User not found 😢")
             
             return
         }
         
-        welcomeVC.user = user
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = user
+            }
+        }
     }
-    
-    // MARK: - Events Handling
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        
-        view.endEditing(true)
-    }
-    
+  
     // MARK: - IBActions
     @IBAction func unwindToLoginController(_ unwindSegue: UIStoryboardSegue) {
         guard let _ = unwindSegue.source as? WelcomeViewController else { return }
@@ -94,20 +87,5 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
         
         present(alert, animated: true)
-    }
-}
-
-// MARK: - Extensions
-extension LoginViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == usernameInput {
-            passwordInput.becomeFirstResponder()
-        }
-        
-        if textField == passwordInput {
-            performSegue(withIdentifier: "welcomeVCSegue", sender: self)
-        }
-        
-        return true
     }
 }
