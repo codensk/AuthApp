@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordInput: UITextField!
     
     @IBOutlet weak var loginButton: UIButton!
-        
+    
     // MARK: - Properties
     private let user = User(username: "User", password: "Password")
     
@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
         
         configureKeyboard()
         configureButtons()
+        configureTextFields()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,7 +43,7 @@ class LoginViewController: UIViewController {
             }
         }
     }
-  
+    
     // MARK: - IBActions
     @IBAction func unwindToLoginController(_ unwindSegue: UIStoryboardSegue) {
         guard let _ = unwindSegue.source as? WelcomeViewController else { return }
@@ -75,6 +76,31 @@ class LoginViewController: UIViewController {
         
         loginButton.setTitleColor(.white, for: .normal)
         loginButton.setTitleColor(UIColor(named: "buttonTextHighlighted"), for: .highlighted)
+    }
+    
+    private func configureTextFields() {
+        let textFields = [usernameInput, passwordInput]
+        
+        textFields.forEach { textField in
+            if let textField = textField {
+                let bottomBorder = UIView()
+                
+                bottomBorder.backgroundColor = .systemGray5
+                
+                textField.textColor = .systemGray
+                textField.borderStyle = .none
+                textField.addSubview(bottomBorder)
+                
+                bottomBorder.translatesAutoresizingMaskIntoConstraints = false
+                
+                // add constraints for bottom line
+                bottomBorder.bottomAnchor.constraint(equalTo: textField.bottomAnchor).isActive = true
+                bottomBorder.leftAnchor.constraint(equalTo: textField.leftAnchor).isActive = true
+                bottomBorder.rightAnchor.constraint(equalTo: textField.rightAnchor).isActive = true
+                bottomBorder.heightAnchor.constraint(equalToConstant: 2).isActive = true
+
+            }
+        }
     }
     
     private func showAlert(title: String, message: String) {

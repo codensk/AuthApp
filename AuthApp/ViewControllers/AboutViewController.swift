@@ -24,8 +24,6 @@ class AboutViewController: UIViewController {
     // MARK: - Methods
     private func configureViewController() {
         view.setGradientBackground(colorTop: UIColor(named: "aboutGradientStart")!, colorBottom: UIColor(named: "aboutGradientFinish")!)
-        
-        title = "About me"
     }
     
     private func configureButtons() {
