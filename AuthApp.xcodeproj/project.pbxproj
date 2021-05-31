@@ -14,7 +14,6 @@
 		A2581930265CA3C100DAEE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A258192E265CA3C100DAEE18 /* LaunchScreen.storyboard */; };
 		A2581938265CA44900DAEE18 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2581937265CA44900DAEE18 /* LoginViewController.swift */; };
 		A258193A265CA45300DAEE18 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2581939265CA45300DAEE18 /* WelcomeViewController.swift */; };
-		A2D1D1392660952300836C51 /* LoginViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D1D1382660952300836C51 /* LoginViewController+UITextFieldDelegate.swift */; };
 		A2D1D13B266096F200836C51 /* UIView+GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D1D13A266096F200836C51 /* UIView+GradientBackground.swift */; };
 		A2D1D13D2660987900836C51 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D1D13C2660987900836C51 /* User.swift */; };
 		A2D1D13F26609D3500836C51 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D1D13E26609D3500836C51 /* AboutViewController.swift */; };
@@ -34,7 +33,6 @@
 		A2581931265CA3C100DAEE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2581937265CA44900DAEE18 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A2581939265CA45300DAEE18 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		A2D1D1382660952300836C51 /* LoginViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		A2D1D13A266096F200836C51 /* UIView+GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GradientBackground.swift"; sourceTree = "<group>"; };
 		A2D1D13C2660987900836C51 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A2D1D13E26609D3500836C51 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 		A2D1D136266093DF00836C51 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A2D1D1382660952300836C51 /* LoginViewController+UITextFieldDelegate.swift */,
 				A2D1D13A266096F200836C51 /* UIView+GradientBackground.swift */,
 			);
 			path = Extensions;
@@ -207,7 +204,6 @@
 				A2D1D13B266096F200836C51 /* UIView+GradientBackground.swift in Sources */,
 				A2581938265CA44900DAEE18 /* LoginViewController.swift in Sources */,
 				A258193A265CA45300DAEE18 /* WelcomeViewController.swift in Sources */,
-				A2D1D1392660952300836C51 /* LoginViewController+UITextFieldDelegate.swift in Sources */,
 				A2581924265CA3BB00DAEE18 /* AppDelegate.swift in Sources */,
 				A2D1D1412660A99700836C51 /* PhotoViewController.swift in Sources */,
 				A2D1D1482660E01800836C51 /* Progress.swift in Sources */,

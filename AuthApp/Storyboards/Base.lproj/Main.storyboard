@@ -232,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j9v-OM-oJq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3755.6074766355136" y="850.75593952483803"/>
+            <point key="canvasLocation" x="3753" y="889"/>
         </scene>
         <!--Hobby View Controller-->
         <scene sceneID="cUR-f6-9IM">
@@ -410,7 +410,7 @@ Cgo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfY-kQ-09B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4518.2242990654204" y="1187.6889848812095"/>
+            <point key="canvasLocation" x="5302" y="421"/>
         </scene>
         <!--Carrier View Controller-->
         <scene sceneID="9gz-58-iyT">
@@ -474,7 +474,7 @@ Cgo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyq-d9-D5e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3755.6074766355136" y="1590.7127429805616"/>
+            <point key="canvasLocation" x="4762" y="1080"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="K13-CL-VIl">
@@ -487,7 +487,7 @@ Cgo
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mh-5d-9Uc">
                                 <rect key="frame" x="114" y="363" width="200" height="200"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="WVD-72-gtt">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WVD-72-gtt">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -532,7 +532,7 @@ Cgo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="To1-N1-iTR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4519.6261682242985" y="519.65442764578836"/>
+            <point key="canvasLocation" x="4607" y="129"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dRr-W8-NsN">
@@ -570,7 +570,7 @@ Cgo
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UkV-Wz-rx5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2855.6074766355136" y="850.75593952483803"/>
+            <point key="canvasLocation" x="2913" y="869"/>
         </scene>
     </scenes>
     <resources>
@@ -579,7 +579,6 @@ Cgo
         <image name="hello" width="110" height="110"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
-        <image name="photo" width="400" height="400"/>
         <image name="programmer" width="512" height="512"/>
         <image name="startSlider" width="22" height="22"/>
         <image name="tent" width="512" height="512"/>
