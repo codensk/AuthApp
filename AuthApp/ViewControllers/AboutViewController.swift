@@ -13,16 +13,33 @@ class AboutViewController: UIViewController {
     @IBOutlet weak var hobbiesButton: UIButton!
     @IBOutlet weak var carrierButton: UIButton!
     
+    // MARK: - Properties
+    var user: User?
+    
     // MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureViewController()
+        configureView()
         configureButtons()
+       
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let user = user else { return }
+        
+        switch segue.destination {
+        case let photoVC as PhotoViewController:
+            photoVC.user = user
+        case let hobbyVC as HobbyViewController:
+            hobbyVC.user = user
+        default:
+            break
+        }
     }
     
     // MARK: - Methods
-    private func configureViewController() {
+    private func configureView() {
         view.setGradientBackground(colorTop: UIColor(named: "aboutGradientStart")!, colorBottom: UIColor(named: "aboutGradientFinish")!)
     }
     

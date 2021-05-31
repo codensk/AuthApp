@@ -407,6 +407,9 @@ Cgo
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="n6s-bZ-kw3"/>
+                    <connections>
+                        <outlet property="informationTextView" destination="Nfq-bG-nvB" id="BvH-Ag-pxQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfY-kQ-09B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -498,14 +501,14 @@ Cgo
                                     <constraint firstAttribute="width" constant="200" id="lz5-AL-ErL"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сергей Воробьев, 33 года" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26c-Pd-gkJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26c-Pd-gkJ">
                                 <rect key="frame" x="30" y="573" width="368" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="г. Новосибирск" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2F-mz-QiF">
-                                <rect key="frame" x="30" y="601" width="368" height="20.666666666666629"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2F-mz-QiF">
+                                <rect key="frame" x="30" y="601" width="368" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -526,7 +529,9 @@ Cgo
                     </view>
                     <navigationItem key="navigationItem" id="JgX-AQ-Ylr"/>
                     <connections>
+                        <outlet property="cityLabel" destination="L2F-mz-QiF" id="LGb-2d-Z08"/>
                         <outlet property="containerPhotoView" destination="9mh-5d-9Uc" id="pCX-pQ-Phh"/>
+                        <outlet property="nameLabel" destination="26c-Pd-gkJ" id="hyP-Lo-2wQ"/>
                         <outlet property="photoView" destination="WVD-72-gtt" id="1M8-9O-Cv3"/>
                     </connections>
                 </viewController>

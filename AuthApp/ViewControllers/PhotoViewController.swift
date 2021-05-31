@@ -11,16 +11,24 @@ class PhotoViewController: UIViewController {
     @IBOutlet weak var containerPhotoView: UIView!
     @IBOutlet weak var photoView: UIImageView!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    
+    
+    // MARK: - Properties
+    var user: User?
+    
     // MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureViewController()
+        configureView()
         configurePhotoView()
+        configureLabels()
     }
     
     // MARK: - Methods
-    private func configureViewController() {
+    private func configureView() {
         view.setGradientBackground(colorTop: UIColor(named: "categoryGradientStart")!, colorBottom: UIColor(named: "categoryGradientFinish")!)
         
         title = "About me"
@@ -35,5 +43,16 @@ class PhotoViewController: UIViewController {
         
         photoView.layer.cornerRadius = photoView.frame.height / 2
         photoView.clipsToBounds = true
+        
+        if let user = user {
+            photoView.image = user.photo
+        }
+    }
+    
+    private func configureLabels() {
+        if let user = user {
+            nameLabel.text = "\(user.fullName), \(user.age)"
+            cityLabel.text = user.city
+        }
     }
 }

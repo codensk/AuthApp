@@ -11,11 +11,14 @@ class CarrierViewController: UIViewController {
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var periodLabel: UILabel!
     
+    // MARK: - Properties
+    var user: User?
+    
     // MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureViewController()
+        configureView()
     }
     
     // MARK: - IBActions
@@ -26,7 +29,7 @@ class CarrierViewController: UIViewController {
     }
   
     // MARK: - Methods
-    private func configureViewController() {
+    private func configureView() {
         view.setGradientBackground(colorTop: UIColor(named: "categoryGradientStart")!, colorBottom: UIColor(named: "categoryGradientFinish")!)
                 
         title = "My profession"

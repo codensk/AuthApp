@@ -6,8 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
 struct User {
     let username: String
     let password: String
+    let photo: UIImage
+    let fullName: String
+    let age: Int
+    let city: String
+    let information: String
 }

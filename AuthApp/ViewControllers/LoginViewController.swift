@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     // MARK: - Properties
-    private let user = User(username: "User", password: "Password")
+    private let user = User(username: "User", password: "Password", photo: UIImage(named: "photo")!, fullName: "Сергей Воробьев", age: 33, city: "Новосибирск", information: "👋 У меня, как и у большинства людей, есть несколько увлечений.\n\nО некоторых я расскажу в этом разделе:\n\n🚴‍♂️ Езда на велосипеде\n\nЛюблю на выходных или после работы покататься на велосипеде. Мой минимум - 12 км. за 1 час. Обычно я катаюсь полтора-два часа\n\n🚶‍♂️Прогулки на свежем воздухе\n\nВ теплую погоду люблю гулять по городу, ходить в парк. Очень нравится отдыхать на берегу реки или озера\n\n🪐 Космос\n\nКосмос захватывает умы людей своей неизведанностью. Уже в далекой древности люди с восхищением смотрели в звёздное небо, но даже сегодня  для человечества космос остается самой большой загадкой")
     
     // MARK: - Life Cycle Methods
     override func viewDidLoad() {
@@ -40,6 +40,10 @@ class LoginViewController: UIViewController {
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = user
+            } else if let navigationVC = viewController as? UINavigationController {
+                let aboutVC = navigationVC.topViewController as! AboutViewController
+                
+                aboutVC.user = user
             }
         }
     }
